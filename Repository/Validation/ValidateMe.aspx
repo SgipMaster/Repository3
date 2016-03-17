@@ -25,7 +25,7 @@
                   <font face=Verdana size=2>Book:</font>
                </td>
                <td>               
-                  <ASP:DropDownList id=ddlBooks runat="server">
+                  <ASP:DropDownList id="ddlBooks" runat="server">
                      <asp:ListItem>-- Please Pick A Book --</asp:ListItem>
                      <asp:ListItem>Programming ASP.NET</asp:ListItem>
                      <asp:ListItem>Programming .NET Windows Applications</asp:ListItem>
@@ -45,6 +45,7 @@
                
                <td align=center rowspan=1>
                  <!-- Validator(s) for the ddlBooks drop down here -->
+				 <asp:RequiredFieldValidator ID="RequiredFieldValidator1" Display="Dynamic" runat="server" ControlToValidate="ddlBooks" ErrorMessage="Please select a book" InitialValue="-- Please Pick A Book --"></asp:RequiredFieldValidator>
                </td>
             </tr>
             <tr>
@@ -62,14 +63,18 @@
                </td>
                
                <td align=center rowspan=1>
-                 <!-- Validator(s) for rblEdition here -->
+				 <!-- Validator(s) for rblEdition here -->
+				 <asp:RequiredFieldValidator ID="RequiredFieldValidator2" Display="Dynamic" runat="server" ControlToValidate="rblEdition" ErrorMessage="Please enter an edition"></asp:RequiredFieldValidator> 
+				 
                </td>
             </tr>
             <tr>
                 <td align=right>Number purchased:</td>
                 <td><ASP:TextBox id="txtNumPurch" runat="server" width="50px" /></td>
                 <td>
-                   <!-- Validator(s) for txtNumPurch here--> 
+					<!-- Validator(s) for txtNumPurch here--> 
+					<asp:RequiredFieldValidator ControlToValidate="txtNumPurch" Display="Dynamic" ID="RequiredFieldValidator4" runat="server" ErrorMessage="Please enter a number purchased"></asp:RequiredFieldValidator> 
+					<asp:CompareValidator ID="CompareValidator1" runat="server" Display="Dynamic" ControlToValidate="txtNumPurch" ErrorMessage="Please enter a positive number" ValueToCompare="0" Operator="GreaterThan" Type="Integer"></asp:CompareValidator>
                 </td>
             </tr>
 
@@ -77,8 +82,10 @@
                 <td align=right>Date purchased:</td>
                 <td><ASP:TextBox id="txtDatePurch" runat="server" width="106px" /></td>
                 <td>
-                    <!-- Validator(s) for txtDatePurch here-->                   
-                </td>
+                    <!-- Validator(s) for txtDatePurch here-->	
+					<asp:RequiredFieldValidator ID="RequiredFieldValidator5" Display="Dynamic" runat="server" ControlToValidate="txtDatePurch" ErrorMessage="Please enter a purchase date"></asp:RequiredFieldValidator>
+					
+				</td>
             </tr>
 
              <tr>
@@ -91,7 +98,8 @@
                </td>
                            
                <td style="HEIGHT: 97px">
-                 <!-- Validator(s) for txtBug here-->   
+                 <!-- Validator(s) for txtBug here--> 
+				<asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" Display="Dynamic" ControlToValidate="txtBug" ErrorMessage="RequiredFieldValidator"></asp:RequiredFieldValidator>
                </td>
              </tr>
 
@@ -176,6 +184,7 @@
                 </tr>
          </table>
          <!-- Validation Summary controls here -->
+			<asp:ValidationSummary ID="ValidationSummary1" runat="server" />
             </div>
     </form>
 </body>

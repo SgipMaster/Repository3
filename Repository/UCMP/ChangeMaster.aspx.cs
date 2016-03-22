@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Web;
+using System.Web.UI;
+using System.Web.UI.WebControls;
+
+public partial class UCMP_ChangeMaster : System.Web.UI.Page
+{
+	protected void Page_Load(object sender, EventArgs e)
+	{
+
+	}
+
+	protected void Button1_Click(object sender, EventArgs e)
+	{
+		UCMP_MyMaster mymaster = (UCMP_MyMaster)this.Master;
+		mymaster.ChangeImage.ImageUrl = "images/spaceship.jpg";
+	}
+}

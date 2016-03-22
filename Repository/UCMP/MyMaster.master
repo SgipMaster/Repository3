@@ -1,0 +1,75 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MyMaster.master.cs" Inherits="UCMP_MyMaster" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+	<link rel="stylesheet" href="css/style.css" type="text/css">
+	<link rel="stylesheet" type="text/css" href="css/mobile.css">
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div id="page">
+		<div id="header">
+			<div>
+				<asp:Image ID="LogoImage" ImageUrl="images/logo.png" runat="server" />
+				<ul id="navigation">
+					<li class="selected">
+						<a href="ChangeMaster.aspx">Home</a>
+					</li>
+					<li>
+						<a href="About.aspx">About</a>
+					</li>
+					<li class="menu">
+						<a href="projects.html">Projects</a>
+						<ul class="primary">
+							<li>
+								<a href="proj1.html">proj 1</a>
+							</li>
+						</ul>
+					</li>
+					<li class="menu">
+						<a href="blog.html">Blog</a>
+						<ul class="secondary">
+							<li>
+								<a href="singlepost.html">Single post</a>
+							</li>
+						</ul>
+					</li>
+					<li>
+						<a href="contact.html">Contact</a>
+					</li>
+				</ul>
+				
+			</div>
+		</div>
+		<div id="body" class="home">
+			<asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+
+			</asp:ContentPlaceHolder>
+		</div>
+		<div id="footer">
+			<div class="connect">
+				<div>
+					<h1>FOLLOW OUR  MISSIONS ON</h1>
+					<div>
+						<a href="http://freewebsitetemplates.com/go/facebook/" class="facebook">facebook</a>
+						<a href="http://freewebsitetemplates.com/go/twitter/" class="twitter">twitter</a>
+						<a href="http://freewebsitetemplates.com/go/googleplus/" class="googleplus">googleplus</a>
+						<a href="http://pinterest.com/fwtemplates/" class="pinterest">pinterest</a>
+					</div>
+				</div>
+			</div>
+			<div class="footnote">
+				<div>
+					<p>&copy; 2023 BY SPACE PROSPECTION | ALL RIGHTS RESERVED</p>
+				</div>
+			</div>
+		</div>
+	</div>
+    </form>
+</body>
+</html>

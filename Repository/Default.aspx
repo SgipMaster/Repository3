@@ -10,8 +10,8 @@
    
    <!-- Headers and links to repository pages go here -->
 
-	<h3>Sample</h3>
-	<a href="Sample/Page1.aspx" target="_blank">Sample/Page1.aspx</a><br />
-	<a href="Sample/Page2.aspx" target="_blank">Sample/Page2.aspx</a><br />
+	<h3>Validation</h3>
+		<a href="Validation/ValidateMe.aspx" target="_blank">ValidateMe.aspx</a>
+	
 	
 </asp:Content>

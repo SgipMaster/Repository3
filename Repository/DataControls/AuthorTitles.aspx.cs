@@ -56,4 +56,13 @@ public partial class DataControls_AuthorTitles : System.Web.UI.Page
 			btnAuthorInsert.Visible = true;
 		}
 	}
+
+
+	protected void gvwAuthors_SelectedIndexChanged(object sender, EventArgs e)
+	{
+		string authorfirstname = gvwAuthors.SelectedRow.Cells[4].Text;
+		string authorlastname = gvwAuthors.SelectedRow.Cells[3].Text;
+
+		lblAuthorTitles.Text = "Titles authored by " + authorfirstname + " " + authorlastname + ".";
+	}
 }

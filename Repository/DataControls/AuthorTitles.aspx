@@ -132,10 +132,9 @@
 			<AlternatingRowStyle BackColor="White" ForeColor="#284775" />
 			<Columns>
 				<asp:CommandField ShowDeleteButton="True" ShowEditButton="True" />
-				<asp:BoundField DataField="title_id" HeaderText="Title" ReadOnly="True" SortExpression="title_id" />
-				<asp:BoundField DataField="title" HeaderText="title" SortExpression="title" />
-				<asp:BoundField DataField="type" HeaderText="type" SortExpression="type" />
-				<asp:TemplateField HeaderText="pub_name" SortExpression="pub_name">
+				<asp:BoundField DataField="title" HeaderText="Title" SortExpression="title" />
+				<asp:BoundField DataField="type" HeaderText="Type" SortExpression="type" />
+				<asp:TemplateField HeaderText="Publisher" SortExpression="pub_name">
 					<EditItemTemplate>
 						<asp:DropDownList ID="DropDownList1" runat="server" DataSourceID="SqlDataSource3" DataTextField="pub_name" DataValueField="pub_id" SelectedValue='<%# Bind("pub_id") %>'></asp:DropDownList>
 						<asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:Pubs %>" SelectCommand="SELECT [pub_id], [pub_name] FROM [publishers]"></asp:SqlDataSource>
@@ -144,7 +143,7 @@
 						<asp:Label ID="Label1" runat="server" Text='<%# Bind("pub_name") %>'></asp:Label>
 					</ItemTemplate>
 				</asp:TemplateField>
-				<asp:TemplateField HeaderText="price" SortExpression="price">
+				<asp:TemplateField HeaderText="Price" SortExpression="price">
 					<EditItemTemplate>
 						<asp:TextBox ID="TextBox1" runat="server" Text='<%# Bind("price", "{0:f2}") %>'></asp:TextBox>
 						<asp:CompareValidator ID="CompareValidator1" runat="server" ErrorMessage="Please enter a Positive Number." ControlToValidate="TextBox1" Display="Dynamic" Text="*" ForeColor="Red" ValueToCompare="0" Operator="GreaterThan" Type="Currency" ></asp:CompareValidator>
@@ -153,7 +152,7 @@
 						<asp:Label ID="Label2" runat="server" Text='<%# Bind("price", "{0:c}") %>'></asp:Label>
 					</ItemTemplate>
 				</asp:TemplateField>
-				<asp:TemplateField HeaderText="advance" SortExpression="advance">
+				<asp:TemplateField HeaderText="Advance" SortExpression="advance">
 					<EditItemTemplate>
 						<asp:TextBox ID="TextBox3" runat="server" Text='<%# Bind("advance", "{0:f2}") %>'></asp:TextBox>
 						<asp:CompareValidator ID="CompareValidator2" runat="server" ErrorMessage="Please enter a Positive Number." ControlToValidate="TextBox3" Display="Dynamic" Text="*" ForeColor="Red" ValueToCompare="0" Operator="GreaterThan" Type="Currency" ></asp:CompareValidator>
@@ -162,7 +161,7 @@
 						<asp:Label ID="Label5" runat="server" Text='<%# Bind("advance", "{0:c}") %>'></asp:Label>
 					</ItemTemplate>
 				</asp:TemplateField>
-				<asp:TemplateField HeaderText="royalty" SortExpression="royalty">
+				<asp:TemplateField HeaderText="Royalty" SortExpression="royalty">
 					<EditItemTemplate>
 						<asp:TextBox ID="TextBox4" runat="server" Text='<%# Bind("royalty") %>'></asp:TextBox>
 						<asp:CompareValidator ID="CompareValidator4" runat="server" ErrorMessage="Please enter a Positive Number." ControlToValidate="TextBox4" Display="Dynamic" Text="*" ForeColor="Red" ValueToCompare="0" Operator="GreaterThan" Type="Integer"></asp:CompareValidator>
@@ -171,7 +170,7 @@
 						<asp:Label ID="Label6" runat="server" Text='<%# Bind("royalty") %>'></asp:Label>
 					</ItemTemplate>
 				</asp:TemplateField>
-				<asp:TemplateField HeaderText="ytd_sales" SortExpression="ytd_sales">
+				<asp:TemplateField HeaderText="Year-to-Date Sales" SortExpression="ytd_sales">
 					<EditItemTemplate>
 						<asp:TextBox ID="TextBox5" runat="server" Text='<%# Bind("ytd_sales") %>'></asp:TextBox>
 						<asp:CompareValidator ID="CompareValidator3" runat="server" ErrorMessage="Please enter a Positive Number." ControlToValidate="TextBox5" Display="Dynamic" Text="*" ForeColor="Red" ValueToCompare="0" Operator="GreaterThan" Type="Integer"></asp:CompareValidator>
@@ -180,7 +179,7 @@
 						<asp:Label ID="Label7" runat="server" Text='<%# Bind("ytd_sales") %>'></asp:Label>
 					</ItemTemplate>
 				</asp:TemplateField>
-				<asp:TemplateField HeaderText="notes" SortExpression="notes">
+				<asp:TemplateField HeaderText="Notes" SortExpression="notes">
 					<EditItemTemplate>
 						<asp:TextBox ID="TextBox2" runat="server" Text='<%# Bind("notes") %>' TextMode="MultiLine"></asp:TextBox>
 					</EditItemTemplate>
@@ -188,7 +187,7 @@
 						<asp:Label ID="Label3" runat="server" Text='<%# Bind("notes") %>'></asp:Label>
 					</ItemTemplate>
 				</asp:TemplateField>
-				<asp:TemplateField HeaderText="pubdate" SortExpression="pubdate">
+				<asp:TemplateField HeaderText="Publication Date" SortExpression="pubdate">
 					<EditItemTemplate>
 						<asp:Calendar ID="Calendar1" runat="server" SelectedDate='<%# Bind("pubdate") %>' VisibleDate='<%# Eval("pubdate") %>'></asp:Calendar>
 					</EditItemTemplate>

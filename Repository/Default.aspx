@@ -42,6 +42,8 @@
 	<a href="State/MadLib1.aspx" target="_blank">MadLib1.aspx</a><br />
 	<h3>Validation</h3>
 	<a href="Validation/ValidateMe.aspx" target="_blank">ValidateMe.aspx</a><br />
-	
+	<h3>Data Controls</h3>
+	<a href="DataControls/AuthorTitles.aspx" target="_blank">AuthorTitles.aspx</a><br />
+	<a href="DataControls/TitleList.aspx" target="_blank">TitleList.aspx</a><br />
 	
 </asp:Content>

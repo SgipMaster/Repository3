@@ -45,5 +45,7 @@
 	<h3>Data Controls</h3>
 	<a href="DataControls/AuthorTitles.aspx" target="_blank">AuthorTitles.aspx</a><br />
 	<a href="DataControls/TitleList.aspx" target="_blank">TitleList.aspx</a><br />
+	<h3>Membership</h3>
+	<a href="Membership/Login.aspx" target="_blank">Login.aspx</a>
 	
 </asp:Content>

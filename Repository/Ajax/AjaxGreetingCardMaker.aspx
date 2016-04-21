@@ -8,6 +8,7 @@
     </head>
 	<body>
 		<form runat="server">
+		<asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
 		  <div>
 			<div style="BORDER-RIGHT: thin ridge; PADDING-RIGHT: 20px; BORDER-TOP: thin ridge; PADDING-LEFT: 20px; FONT-SIZE: x-small; PADDING-BOTTOM: 20px; BORDER-LEFT: thin ridge; WIDTH: 293px; PADDING-TOP: 20px; BORDER-BOTTOM: thin ridge; FONT-FAMILY: Verdana; HEIGHT: 512px; BACKGROUND-COLOR: lightyellow">Choose 
 				a background color:<br />
@@ -44,14 +45,28 @@
 				<br /><br />
 				<asp:button ID="cmdUpdate" runat="server" Height="24px" Width="71px" Text="Update" onclick="cmdUpdate_Click"></asp:button>
 			</div>
-			<asp:panel ID="pnlCard" style="Z-INDEX: 101; LEFT: 350px; POSITION: absolute; TOP: 16px" runat="server" 
-			Width="339px"  HorizontalAlign="Center"><br />&nbsp; 
-			    <asp:Label ID="lblGreeting" runat="server" Width="325px"></asp:Label>
-			    <br /><br /><br />
-				<asp:PlaceHolder ID="picHolder" runat="server"></asp:PlaceHolder>
-				<br />
-				<asp:Label ID="fromlabel" runat="server"></asp:Label>
-		    </asp:panel>
+			<asp:UpdatePanel ID="UpdatePanel1" runat="server">
+				<ContentTemplate>
+					<asp:panel ID="pnlCard" style="Z-INDEX: 101; LEFT: 350px; POSITION: absolute; TOP: 16px" runat="server" 
+					Width="339px"  HorizontalAlign="Center"><br />&nbsp; 
+						<asp:Label ID="lblGreeting" runat="server" Width="325px"></asp:Label>
+						<br /><br /><br />
+						<asp:PlaceHolder ID="picHolder" runat="server"></asp:PlaceHolder>
+						<br />
+						<asp:Label ID="fromlabel" runat="server"></asp:Label>
+					</asp:panel>
+				</ContentTemplate>
+				<Triggers>
+					<asp:AsyncPostBackTrigger ControlID="lstBorder" />
+					<asp:AsyncPostBackTrigger ControlID="txtGreeting" />
+					<asp:AsyncPostBackTrigger ControlID="cmdUpdate" EventName="Click" />
+					<asp:AsyncPostBackTrigger ControlID="lstBackColor" />
+					<asp:AsyncPostBackTrigger ControlID="lstFontName" />
+					<asp:AsyncPostBackTrigger ControlID="txtFontSize" />
+					<asp:AsyncPostBackTrigger ControlID="picList" />
+					<asp:AsyncPostBackTrigger ControlID="nameBox" />
+				</Triggers>
+			</asp:UpdatePanel>
 	      </div>
 		</form>
 	</body>

@@ -46,6 +46,9 @@
 	<a href="DataControls/AuthorTitles.aspx" target="_blank">AuthorTitles.aspx</a><br />
 	<a href="DataControls/TitleList.aspx" target="_blank">TitleList.aspx</a><br />
 	<h3>Membership</h3>
-	<a href="Membership/Login.aspx" target="_blank">Login.aspx</a>
+	<a href="Membership/Login.aspx" target="_blank">Login.aspx</a><br />
+	<h3>Ajax</h3>
+	<a href="Ajax/AjaxGreetingCardMaker.aspx" target="_blank">AjaxGreetingCardMaker.aspx</a><br />
+	<a href="Ajax/AjaxToolkit.aspx" target="_blank">AjaxToolkit.aspx</a><br />
 	
 </asp:Content>

@@ -50,5 +50,9 @@
 	<h3>Ajax</h3>
 	<a href="Ajax/AjaxGreetingCardMaker.aspx" target="_blank">AjaxGreetingCardMaker.aspx</a><br />
 	<a href="Ajax/AjaxToolkit.aspx" target="_blank">AjaxToolkit.aspx</a><br />
-	
+	<h3>Error Handling and Tracing</h3>
+	<a href="ErrorHandling/ErrorHandling1.aspx" target="_blank">ErrorHandling1.aspx</a><br />
+	<a href="ErrorHandling/ErrorHandling2.aspx" target="_blank">ErrorHandling2.aspx</a><br />
+	<a href="ErrorHandling/AuthorManager_Exception.aspx" target="_blank">AuthorManager_Exception.aspx</a><br />
+	<a href="ErrorHandling/UnhandledError.aspx" target="_blank">UnhandledError.aspx</a><br />
 </asp:Content>
